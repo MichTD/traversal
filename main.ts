@@ -7,10 +7,19 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile1`, function (sprite, l
     effects.confetti.startScreenEffect()
     game.setGameOverEffect(true, effects.starField)
 })
+controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
+    Bob.sayText(":)")
+})
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (Bob.vy == 0) {
         Bob.vy = -100
     }
+})
+info.onCountdownEnd(function () {
+    music.play(music.createSoundEffect(WaveShape.Noise, 3837, 1, 202, 147, 2000, SoundExpressionEffect.None, InterpolationCurve.Logarithmic), music.PlaybackMode.UntilDone)
+    game.setGameOverMessage(false, "GAME OVER!")
+    Bob.sayText(":(")
+    game.reset()
 })
 let Bob: Sprite = null
 Bob = sprites.create(img`
@@ -157,6 +166,7 @@ scene.setBackgroundImage(img`
 tiles.setCurrentTilemap(tilemap`level2`)
 Bob.ay = 100
 scene.cameraFollowSprite(Bob)
+info.startCountdown(30)
 game.onUpdate(function () {
     Bob.setImage(img`
         . . . . . . . . . . . . . . . . 
