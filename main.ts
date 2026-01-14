@@ -8,7 +8,7 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile1`, function (sprite, l
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (Bob.vy == 0) {
-        Bob.vy = -140
+        Bob.vy = -100
     }
 })
 let Bob: Sprite = null
@@ -154,7 +154,7 @@ scene.setBackgroundImage(img`
     7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
     `)
 tiles.setCurrentTilemap(tilemap`level2`)
-Bob.ay = 200
+Bob.ay = 100
 scene.cameraFollowSprite(Bob)
 game.onUpdate(function () {
     Bob.setImage(img`
