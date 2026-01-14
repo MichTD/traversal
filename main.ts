@@ -5,6 +5,7 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile0`, function (sprite, l
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile1`, function (sprite, location) {
     game.gameOver(true)
     game.setGameOverEffect(true, effects.starField)
+    effects.confetti.startScreenEffect()
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (Bob.vy == 0) {
