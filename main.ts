@@ -175,7 +175,7 @@ game.onUpdate(function () {
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         `)
-    if (true) {
-    	
+    if (Bob.vx < 0) {
+        Bob.image.flipX()
     }
 })
