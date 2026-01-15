@@ -1,5 +1,7 @@
 {
-    "name": "traversal",
+    "name": "Traversal",
+    "version": "0.0.1",
+    "description": "",
     "dependencies": {
         "device": "*"
     },
@@ -7,7 +9,11 @@
         "main.blocks",
         "main.ts",
         "README.md",
-        "assets.json"
+        "assets.json",
+        "tilemap.g.jres",
+        "tilemap.g.ts",
+        "images.g.jres",
+        "images.g.ts"
     ],
     "testFiles": [
         "test.ts"
