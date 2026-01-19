@@ -9,7 +9,7 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile1`, function (sprite, l
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (Bob.vy == 0) {
-        Bob.vy = -100
+        Bob.vy = -85
     }
 })
 let Bob: Sprite = null
