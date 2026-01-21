@@ -1,16 +1,11 @@
-scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile0`, function (sprite, location) {
-    game.gameOver(false)
-    game.setGameOverEffect(false, effects.melt)
-})
-scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile1`, function (sprite, location) {
-    game.gameOver(true)
-    effects.confetti.startScreenEffect()
-    game.setGameOverEffect(true, effects.starField)
-})
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (Bob.vy == 0) {
         Bob.vy = -85
     }
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`transparency16`, function (sprite, location) {
+    game.gameOver(false)
+    game.setGameOverEffect(false, effects.melt)
 })
 let Bob: Sprite = null
 Bob = sprites.create(img`
